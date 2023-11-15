@@ -8,17 +8,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def return_root():
+    # added comment
     return 'Hello there', 200
 
 
 @app.route('/<random_string>')
 def return_backwards_string(random_string):
-    return "".join(reversed(random_string)), 200
+    return "".join(reversed(random_string))
 
 
 @app.route('/get-mode')
 def get_mode():
-    return os.environ.get('MODE'), 200
+    return os.environ.get('MODE')
 
 
 if __name__ == '__main__':
