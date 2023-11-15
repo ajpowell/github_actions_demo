@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def return_root():
+    # added comment
     return 'Hello there', 200
 
 
